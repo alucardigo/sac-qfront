@@ -1,0 +1,16 @@
+[Unit]
+Description=SAC sac@bellube Email bridge (Microsoft Graph <-> QFront)
+After=network.target
+
+[Service]
+Type=simple
+User=bellube.rodrigo.faria
+WorkingDirectory=/home/bellube.rodrigo.faria/email-bridge
+ExecStart=/usr/bin/node /home/bellube.rodrigo.faria/email-bridge/email-bridge.js
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/bellube.rodrigo.faria/email-bridge/bridge.log
+StandardError=append:/home/bellube.rodrigo.faria/email-bridge/bridge.log
+
+[Install]
+WantedBy=multi-user.target

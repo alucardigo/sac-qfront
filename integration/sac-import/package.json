@@ -1,0 +1,13 @@
+{
+  "name": "sac-history-import",
+  "version": "1.0.0",
+  "description": "Importa histórico do sac@bellube (IMAP/M365) para conversas no QFront",
+  "main": "import_sac_history.js",
+  "scripts": { "start": "node import_sac_history.js" },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "imapflow": "^1.0.164",
+    "mailparser": "^3.7.1"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "sac-email-bridge",
+  "version": "1.0.0",
+  "description": "Bridge sac@bellube (M365 Graph) <-> QFront/Chatwoot",
+  "main": "email-bridge.js",
+  "scripts": { "start": "node email-bridge.js", "import": "node email-bridge.js import" },
+  "dependencies": { "axios": "^1.7.7", "dotenv": "^16.4.5" }
+}

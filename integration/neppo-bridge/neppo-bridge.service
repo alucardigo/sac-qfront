@@ -1,0 +1,16 @@
+[Unit]
+Description=Neppo-QFront WhatsApp bridge (SAC Bel Lube - Fase 1 inbound)
+After=network.target
+
+[Service]
+Type=simple
+User=bellube.rodrigo.faria
+WorkingDirectory=/home/bellube.rodrigo.faria/neppo-bridge
+ExecStart=/usr/bin/node /home/bellube.rodrigo.faria/neppo-bridge/bridge.js
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/bellube.rodrigo.faria/neppo-bridge/bridge.log
+StandardError=append:/home/bellube.rodrigo.faria/neppo-bridge/bridge.log
+
+[Install]
+WantedBy=multi-user.target

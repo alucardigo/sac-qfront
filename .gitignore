@@ -1,0 +1,44 @@
+# ═══════════════════════════════════════════════════════════════
+#  SEGREDOS E CREDENCIAIS — NUNCA COMMITAR
+# ═══════════════════════════════════════════════════════════════
+**/.env
+*.env
+!**/.env.example
+!*.env.example
+
+# ═══════════════════════════════════════════════════════════════
+#  ESTADO DE RUNTIME (contém tokens de sessão + e-mails de clientes)
+# ═══════════════════════════════════════════════════════════════
+**/*state*.json
+**/*.log
+integration/email-bridge/verify-marker.txt
+
+# ═══════════════════════════════════════════════════════════════
+#  DADOS PESSOAIS / PII — repositório é PÚBLICO
+# ═══════════════════════════════════════════════════════════════
+# Base de parceiros/contatos exportada do ERP
+integration/**/contatos_sankhya.csv
+integration/**/*.csv
+# Manuais operacionais com prints reais (nomes/e-mails de clientes e colaboradores)
+docs/screenshots/
+docs/*.pdf
+docs/*.html
+docs/MANUAL_*.md
+# Documentos internos legados (infra, nomes, telefones) — substituídos pelas docs sanitizadas
+docs/ARCHITECTURE.md
+docs/OPERACAO_E_HANDOFF.md
+integration/sankhya_consulta_fase1.md
+integration/neppo_qfront_bridge.md
+
+# ═══════════════════════════════════════════════════════════════
+#  DOSSIÊ LEI DO BEM — entregue separadamente (evidências internas)
+# ═══════════════════════════════════════════════════════════════
+lei-do-bem/
+
+# ═══════════════════════════════════════════════════════════════
+#  Node / SO
+# ═══════════════════════════════════════════════════════════════
+**/node_modules/
+npm-debug.log*
+.DS_Store
+Thumbs.db
